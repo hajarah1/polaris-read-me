@@ -46,7 +46,7 @@ For those running a **validator** node on Polaris, competitiveness is less about
 **Competition and Network Dynamics:** 
 
 ## Installation Instructions
-
+### Miner Installation
 Setting up a Polaris node is straightforward thanks to the provided installation scripts and tools. You can install both miners and validators using the same process (the role is chosen during runtime). Below are step-by-step instructions to get started:
 
 1. **Prepare the System:** Ensure that your system meets the requirements (see above). On a fresh Ubuntu/Debian Linux server, you should update packages and install Docker, Git, and OpenSSH server. For example, on Ubuntu you might run: 
@@ -144,7 +144,76 @@ polaris logs           # tail logs to ensure heartbeats are being sent
 ```
 
 After this, your node is actively participating in the Polaris subnet! 🎉  You can let it run and periodically check your standings on Bittensor stats (e.g., via [taostats.io](https://taostats.io) for netuid 33) or monitor via the CLI.
+### Validator Installation 
+## System Requirements
 
+To run a validator node on the **Polaris Cloud Subnet**, ensure your system meets the following requirements:
+- **Operating System**: Windows, macOS, or Linux
+- **RAM**: Minimum 8 GB
+- **Docker**: Installed and running
+- **CPU**: Modern multi-core processor (e.g., Intel i5 or AMD Ryzen 5)
+- **Python Version**: Python 3.8 or higher
+- **TAO Tokens**: At least **1 TAO token** (0.0005 TAO burned during registration)
+
+## Installation & Setup Guide
+
+Follow the steps below to join and contribute to the **Polaris Cloud Subnet** (NetUID 49) as a **Validator**.
+
+### Step 1: Create Wallets
+
+Create a **coldkey** and **hotkey** for the **subnet validator wallet**:
+
+```bash
+# Install bittensor cli
+pip install bittensor-cli==9.1.0 # Use latest or desired version
+
+# Create a coldkey for the validator
+btcli wallet new_coldkey --wallet.name <your_wallet_name>
+
+# Create a hotkey for the validator
+btcli wallet new_hotkey --wallet.name <your_wallet_name> --wallet.hotkey default
+```
+
+### Step 2: Register Keys
+
+Register your **subnet validator key** to the subnet:
+
+```bash
+btcli subnet register --netuid 49 --subtensor.network finney --wallet.name <your_wallet_name> --wallet.hotkey default
+```
+
+### Step 3: Verify Wallet Registration
+
+Check that your key has been successfully registered by running:
+
+```bash
+btcli wallet overview --wallet.name <your_wallet_name> --subtensor.network finney
+```
+
+### Step 4: Pull and Run the Validator Docker Image
+
+Pull the Docker image for the Polaris validator:
+
+```bash
+docker pull bateesa/polaris-validator
+```
+
+Run the validator using the appropriate command for your operating system:
+
+**For macOS/Linux**:
+```bash
+docker run --rm -it -v ~/.bittensor:/root/.bittensor -e WALLET_NAME=<your_wallet_name> -e WALLET_HOTKEY=default bateesa/polaris-validator
+```
+
+**For Windows (Command Prompt)**:
+```bash
+docker run --rm -it -v C:\Users\YourUsername\.bittensor:/root/.bittensor -e WALLET_NAME=<your_wallet_name> -e WALLET_HOTKEY=default bateesa/polaris-validator
+```
+
+**For Windows (PowerShell)**:
+```powershell
+docker run --rm -it -v ${HOME}/.bittensor:/root/.bittensor -e WALLET_NAME=<your_wallet_name> -e WALLET_HOTKEY=default bateesa/polaris-validator
+```
 ## FAQ (Frequently Asked Questions)
 
 - **Q: Do I need an AI model or to train anything to mine on Polaris?**  
