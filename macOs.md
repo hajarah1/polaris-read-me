@@ -231,11 +231,6 @@ It's best practice to use a Python virtual environment to isolate dependencies.
 python3.10 -m venv venv
 ```
 
-*Note:* If your system uses `python` instead of `python3`, adjust the command accordingly:
-```bash
-python -m venv venv
-```
-
 #### Activate the Virtual Environment
 
 - **On macOS/Linux:**
