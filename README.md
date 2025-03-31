@@ -160,7 +160,6 @@ To run a validator node on the **Polaris Cloud Subnet**, ensure your system meet
 Follow the steps below to join and contribute to the **Polaris Cloud Subnet** (NetUID 49) as a **Validator**.
 
 ### Step 1: Create Wallets
-=======
 #### Installation & Setup Guide
 
 Follow the steps below to join and contribute to the **Polaris Cloud Subnet** (NetUID 49) as a **Validator**.
