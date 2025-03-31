@@ -56,7 +56,7 @@ Setting up a Polaris node is straightforward thanks to the provided installation
    sudo apt install -y docker.io git openssh-server curl
    ``` 
 
-   *If you’re on Windows:* Enable WSL2 and install an Ubuntu distribution for it . Then within the Ubuntu/WSL terminal, install Docker and other dependencies as above . *If you’re on macOS(https://github.com/hajarah1/polaris-read-me/blob/main/macOs.md):* Make sure Docker Desktop is installed , or set up a Linux VM (VirtualBox + Ubuntu ISO) and proceed in that environment.
+   *If you’re on Windows:* Enable WSL2 and install an Ubuntu distribution for it . Then within the Ubuntu/WSL terminal, install Docker and other dependencies as above . *If you’re on [macOS](https://github.com/hajarah1/polaris-read-me/blob/main/macOs.md):* Make sure Docker Desktop is installed , or set up a Linux VM (VirtualBox + Ubuntu ISO) and proceed in that environment.
 
 2. **Clone the Polaris Repository:** Download the Polaris installer repository from GitHub. In a terminal, run: 
 
