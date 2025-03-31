@@ -143,7 +143,7 @@ polaris status         # check status, should show services running
 polaris logs           # tail logs to ensure heartbeats are being sent
 ```
 
-After this, your node is actively participating in the Polaris subnet! 🎉  You can let it run and periodically check your standings on Bittensor stats (e.g., via [taostats.io](https://taostats.io) for netuid 33) or monitor via the CLI.
+After this, your node is actively participating in the Polaris subnet! 🎉  You can let it run and periodically check your standings on Bittensor stats (e.g., via [taostats.io](https://taostats.io) for netuid 49) or monitor via the CLI.
 ### Validator Installation  
 ## System Requirements
 
