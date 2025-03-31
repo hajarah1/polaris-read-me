@@ -144,7 +144,7 @@ polaris logs           # tail logs to ensure heartbeats are being sent
 ```
 
 After this, your node is actively participating in the Polaris subnet! 🎉  You can let it run and periodically check your standings on Bittensor stats (e.g., via [taostats.io](https://taostats.io) for netuid 33) or monitor via the CLI.
-### Validator Installation 
+### Validator Installation  
 ## System Requirements
 
 To run a validator node on the **Polaris Cloud Subnet**, ensure your system meets the following requirements:
@@ -160,8 +160,10 @@ To run a validator node on the **Polaris Cloud Subnet**, ensure your system meet
 Follow the steps below to join and contribute to the **Polaris Cloud Subnet** (NetUID 49) as a **Validator**.
 
 ### Step 1: Create Wallets
+=======
+#### Installation & Setup Guide
 
-Create a **coldkey** and **hotkey** for the **subnet validator wallet**:
+Follow the steps below to join and contribute to the **Polaris Cloud Subnet** (NetUID 49) as a **Validator**.
 
 ```bash
 # Install bittensor cli
@@ -173,7 +175,6 @@ btcli wallet new_coldkey --wallet.name <your_wallet_name>
 # Create a hotkey for the validator
 btcli wallet new_hotkey --wallet.name <your_wallet_name> --wallet.hotkey default
 ```
-
 ### Step 2: Register Keys
 
 Register your **subnet validator key** to the subnet:
@@ -181,7 +182,6 @@ Register your **subnet validator key** to the subnet:
 ```bash
 btcli subnet register --netuid 49 --subtensor.network finney --wallet.name <your_wallet_name> --wallet.hotkey default
 ```
-
 ### Step 3: Verify Wallet Registration
 
 Check that your key has been successfully registered by running:
