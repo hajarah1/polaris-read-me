@@ -144,7 +144,7 @@ polaris logs           # tail logs to ensure heartbeats are being sent
 ```
 
 After this, your node is actively participating in the Polaris subnet! 🎉  You can let it run and periodically check your standings on Bittensor stats (e.g., via [taostats.io](https://taostats.io) for netuid 49) or monitor via the CLI.
-### Validator Installation  
+### [Validator Installation](https://github.com/bigideaafrica/polarisvalidator/blob/main/README.md)  
 ## System Requirements
 
 To run a validator node on the **Polaris Cloud Subnet**, ensure your system meets the following requirements:
