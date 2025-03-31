@@ -145,7 +145,7 @@ polaris logs           # tail logs to ensure heartbeats are being sent
 
 After this, your node is actively participating in the Polaris subnet! 🎉  You can let it run and periodically check your standings on Bittensor stats (e.g., via [taostats.io](https://taostats.io) for netuid 33) or monitor via the CLI.
 ### Validator Installation 
-## System Requirements
+#### System Requirements
 
 To run a validator node on the **Polaris Cloud Subnet**, ensure your system meets the following requirements:
 - **Operating System**: Windows, macOS, or Linux
@@ -155,11 +155,11 @@ To run a validator node on the **Polaris Cloud Subnet**, ensure your system meet
 - **Python Version**: Python 3.8 or higher
 - **TAO Tokens**: At least **1 TAO token** (0.0005 TAO burned during registration)
 
-## Installation & Setup Guide
+#### Installation & Setup Guide
 
 Follow the steps below to join and contribute to the **Polaris Cloud Subnet** (NetUID 49) as a **Validator**.
 
-### Step 1: Create Wallets
+##### Step 1: Create Wallets
 
 Create a **coldkey** and **hotkey** for the **subnet validator wallet**:
 
@@ -174,7 +174,7 @@ btcli wallet new_coldkey --wallet.name <your_wallet_name>
 btcli wallet new_hotkey --wallet.name <your_wallet_name> --wallet.hotkey default
 ```
 
-### Step 2: Register Keys
+##### Step 2: Register Keys
 
 Register your **subnet validator key** to the subnet:
 
@@ -182,7 +182,7 @@ Register your **subnet validator key** to the subnet:
 btcli subnet register --netuid 49 --subtensor.network finney --wallet.name <your_wallet_name> --wallet.hotkey default
 ```
 
-### Step 3: Verify Wallet Registration
+##### Step 3: Verify Wallet Registration
 
 Check that your key has been successfully registered by running:
 
@@ -190,7 +190,7 @@ Check that your key has been successfully registered by running:
 btcli wallet overview --wallet.name <your_wallet_name> --subtensor.network finney
 ```
 
-### Step 4: Pull and Run the Validator Docker Image
+##### Step 4: Pull and Run the Validator Docker Image
 
 Pull the Docker image for the Polaris validator:
 
